@@ -1,0 +1,38 @@
+[
+    {
+        "id":1,
+        "name": "Ronaldo",
+        "tel": "0331554778",    
+        "permission": 1
+    },
+    {
+        "id":2,
+        "name": "Beckham",
+        "tel": "0345554778",    
+        "permission": 2
+    },
+    {
+        "id":3,
+        "name": "Messi",
+        "tel": "0335254778",    
+        "permission": 3
+    },
+    {
+        "id":4,
+        "name": "Ronaldinho",
+        "tel": "0335754778",    
+        "permission": 3
+    },
+    {
+        "id":5,
+        "name": "Pele",
+        "tel": "0335544878",    
+        "permission": 3
+    },
+    {
+        "id":6,
+        "name": "Drogba",
+        "tel": "0335954778",    
+        "permission": 2
+    }
+]
