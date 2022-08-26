@@ -5,6 +5,9 @@ import Search from './Search';
 import TableData from './TableData';
 import React, { Component } from 'react';
 import DataUser from './Data.json';
+import { v4 as uuidv4 } from 'uuid';
+
+
 class App extends Component {
   constructor(props) {
     super(props);
@@ -17,13 +20,21 @@ class App extends Component {
     
   }
 
+editUser = () => {
+  console.log("abc");
+}
+
   getNewUserData = (name,tel,permission) => { 
     var item = {};
-    item.id = "";
+    item.id = uuidv4();
     item.name = name;
     item.tel = tel;
     item.permission =permission;
-
+    var items = this.state.data;
+    items.push(item);
+    this.setState({
+      data:items
+    })
     console.log(item);
    
    }
@@ -58,7 +69,7 @@ class App extends Component {
               <Search 
               checkConnectionProps={(dl)=> this.getTextSearch(dl)}
               ketNoi={() => this.doiTrangThai()}  hienThiForm={this.state.hienThiForm}/>
-              <TableData dataUserProps={ketQua}/>
+              <TableData editFun ={()=>this.editUser()} dataUserProps={ketQua}/>
               <AddUser add={(name, tel,permission)=>this.getNewUserData(name, tel,permission)} hienThiForm={this.state.hienThiForm} />
             </div>
           </div>
