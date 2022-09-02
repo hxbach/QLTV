@@ -11,7 +11,9 @@ export default class Search extends Component {
 
   isShowEditUserForm =()=>{
       if(this.props.editUserStatus ===true){
-        return <EditUser/>
+        return <EditUser 
+        userEditObject = {this.props.userEditObject}
+        changEditUserStatus = {()=>this.props.changEditUserStatus()}/>
       }
   }
 

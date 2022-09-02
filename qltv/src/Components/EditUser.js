@@ -10,13 +10,13 @@ export default class EditUser extends Component {
         <div className="card-header text-center"> Sửa thông tin User</div>
         <div className="card-body text-primary">
           <div className="form-group">
-            <input type="text"  name ="name" className="form-control" placeholder="Tên User" />
+            <input defaultValue={this.props.userEditObject.name} type="text"  name ="name" className="form-control" placeholder="Tên User" />
           </div>
           <div className="form-group">
-            <input type="text"  name ="tel" className="form-control" placeholder="Điện thoại" />
+            <input defaultValue={this.props.userEditObject.tel} type="text"  name ="tel" className="form-control" placeholder="Điện thoại" />
           </div>
           <div className="form-group">
-            <select className="custom-select"  name ="permission" required>
+            <select defaultValue={this.props.userEditObject.permission} className="custom-select"  name ="permission" required>
               <option value>Quyền người dùng</option>
               <option value={1}>Admin</option>
               <option value={2}>Moderator</option>
@@ -25,7 +25,7 @@ export default class EditUser extends Component {
           </div>
           <div className="form group">
             <input type="reset"  className="btn btn-block btn-primary" 
-             value="Lưu"/>
+             value="Lưu" onClick={()=>this.props.changeEditUserStatus()}/>
           </div>
         </div>
       </div>
